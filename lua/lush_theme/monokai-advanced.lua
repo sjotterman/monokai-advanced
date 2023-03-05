@@ -575,7 +575,7 @@ local theme = lush(function(injected_functions)
     DiagnosticVirtualTextWarn              { fg="#dfd561", }, -- DiagnosticVirtualTextWarn xxx guifg=#dfd561
     DiagnosticVirtualTextInfo              { fg="#f6f6ec", }, -- DiagnosticVirtualTextInfo xxx guifg=#f6f6ec
     DiagnosticVirtualTextHint              { fg="#78dce8", }, -- DiagnosticVirtualTextHint xxx guifg=#78dce8
-    DiagnosticSignError                    { fg="#f3005f", }, -- DiagnosticSignError xxx guifg=#f3005f
+    DiagnosticSignError                    { fg="#f3005f", bg=LineNr.bg }, -- DiagnosticSignError xxx guifg=#f3005f
     TroubleSignError                       { DiagnosticSignError }, -- TroubleSignError xxx links to DiagnosticSignError
     DiagnosticSignWarn                     { fg="#dfd561", }, -- DiagnosticSignWarn xxx guifg=#dfd561
     DiffviewFilePanelConflicts             { DiagnosticSignWarn }, -- DiffviewFilePanelConflicts xxx links to DiagnosticSignWarn
@@ -586,7 +586,7 @@ local theme = lush(function(injected_functions)
     TroubleSignHint                        { DiagnosticSignHint }, -- TroubleSignHint xxx links to DiagnosticSignHint
     sym"@text"                             { fg="#97e023", }, -- @text          xxx guifg=#97e023
     sym"@text.literal"                     { fg="#dfd561", }, -- @text.literal  xxx guifg=#dfd561
-    Comment                                { fg=hsl(253, 1, 43), bg=Normal.bg }, -- Comment        xxx ctermfg=14 gui=italic guifg=#72696a
+    Comment                                { fg=hsl(253, 1, 43)}, -- Comment        xxx ctermfg=14 gui=italic guifg=#72696a
     WhichKeySeparator                      { Comment }, -- WhichKeySeparator xxx links to Comment
     NvimTreeGitIgnored                     { Comment }, -- NvimTreeGitIgnored xxx links to Comment
     TelescopeResultsComment                { Comment }, -- TelescopeResultsComment xxx links to Comment
