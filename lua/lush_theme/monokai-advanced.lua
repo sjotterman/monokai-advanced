@@ -71,13 +71,18 @@ local gray_4 = hsl("#333842")
 local gray_5 = hsl("#4d5154")
 local gray_6 = hsl(60,06,45)
 local gray_7 = hsl("#b1b1b1")
+-- local gray_8 = hsl("#c1c1c1")
 
 
 local pinkish_gray = hsl("#72696a")
 
 local white = hsl("#f6f6ec")
 
+local normal_fg = white
+local normal_bg = hsl(210, 7, 12)
 
+
+local variable = white
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
 ---@diagnostic disable: undefined-global
@@ -220,7 +225,7 @@ local theme = lush(function(injected_functions)
     WinBarNC                               { WinBar }, -- WinBarNC       xxx links to WinBar
     Cursor                                 { gui="reverse", }, -- Cursor         xxx gui=reverse
     lCursor                                { gui="reverse", }, -- lCursor        xxx gui=reverse
-    Normal                                 { fg=hsl(60,36,95), bg=hsl(210,7,12), }, -- Normal         xxx guifg=#f6f6ec guibg=#26292c
+    Normal                                 { fg=normal_fg, bg=normal_bg, }, -- Normal         xxx guifg=#f6f6ec guibg=#26292c
     NvimSpacing                            { Normal }, -- NvimSpacing    xxx links to Normal
     CopilotAnnotation                      { Normal }, -- CopilotAnnotation xxx links to Normal
     DiffviewNormal                         { Normal }, -- DiffviewNormal xxx links to Normal
@@ -672,7 +677,7 @@ local theme = lush(function(injected_functions)
     sym"@operator"                         { fg=primary_red, }, -- @operator      xxx guifg=#f3005f
     sym"@keyword"                          { fg=primary_red, gui="italic", }, -- @keyword       xxx gui=italic guifg=#f3005f
     sym"@exception"                        { fg=primary_red, }, -- @exception     xxx guifg=#f3005f
-    sym"@variable"                         { fg=white, }, -- @variable      xxx guifg=#f6f6ec
+    sym"@variable"                         { fg=variable, }, -- @variable      xxx guifg=#f6f6ec
     sym"@type"                             { fg=light_blue, }, -- @type          xxx guifg=#78dce8
     sym"@type.definition"                  { fg=light_blue, }, -- @type.definition xxx guifg=#78dce8
     sym"@storageclass"                     { fg=light_blue, }, -- @storageclass  xxx guifg=#78dce8
