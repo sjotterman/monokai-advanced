@@ -64,13 +64,13 @@ local light_blue = hsl("#78dce8")
 local purple = hsl("#9c64fe")
 
 local black = hsl("#000000")
-local darkest_gray = hsl(210,7,14)
-local darker_gray = hsl("#26292c")
-local dark_gray = hsl("#2e323c")
-local gray_b = hsl("#333842")
-local medium_gray = hsl("#4d5154")
-local light_gray = hsl(60,06,45)
-local lighter_gray = hsl("#b1b1b1")
+local gray_1 = hsl(210,7,14)
+local gray_2 = hsl("#26292c")
+local gray_3 = hsl("#2e323c")
+local gray_4 = hsl("#333842")
+local gray_5 = hsl("#4d5154")
+local gray_6 = hsl(60,06,45)
+local gray_7 = hsl("#b1b1b1")
 
 
 local pinkish_gray = hsl("#72696a")
@@ -85,14 +85,14 @@ local theme = lush(function(injected_functions)
   local sym = injected_functions.sym
   return {
     SpecialKey                             { fg=primary_red, }, -- SpecialKey     xxx ctermfg=81 guifg=#f3005f
-    EndOfBuffer                            { fg=darker_gray, }, -- EndOfBuffer    xxx guifg=#26292c
+    EndOfBuffer                            { fg=gray_2, }, -- EndOfBuffer    xxx guifg=#26292c
     DiffviewEndOfBuffer                    { EndOfBuffer }, -- DiffviewEndOfBuffer xxx links to EndOfBuffer
     NvimTreeEndOfBuffer                    { EndOfBuffer }, -- NvimTreeEndOfBuffer xxx links to EndOfBuffer
     TermCursor                             { gui="reverse", }, -- TermCursor     xxx cterm=reverse gui=reverse
     GitSignsAddInline                      { TermCursor }, -- GitSignsAddInline xxx links to TermCursor
     GitSignsDeleteInline                   { TermCursor }, -- GitSignsDeleteInline xxx links to TermCursor
     GitSignsChangeInline                   { TermCursor }, -- GitSignsChangeInline xxx links to TermCursor
-    NonText                                { fg=medium_gray, }, -- NonText        xxx ctermfg=12 guifg=#4d5154
+    NonText                                { fg=gray_5, }, -- NonText        xxx ctermfg=12 guifg=#4d5154
     TelescopeResultsDiffUntracked          { NonText }, -- TelescopeResultsDiffUntracked xxx links to NonText
     TelescopePreviewHyphen                 { NonText }, -- TelescopePreviewHyphen xxx links to NonText
     FidgetTask                             { NonText }, -- FidgetTask     xxx links to NonText
@@ -107,29 +107,29 @@ local theme = lush(function(injected_functions)
     TroubleFile                            { Directory }, -- TroubleFile    xxx links to Directory
     ErrorMsg                               { fg=primary_red, gui="bold", }, -- ErrorMsg       xxx ctermfg=15 ctermbg=1 gui=bold guifg=#f3005f
     NvimInvalidSpacing                     { ErrorMsg }, -- NvimInvalidSpacing xxx links to ErrorMsg
-    IncSearch                              { fg=darker_gray, bg=primary_orange, }, -- IncSearch      xxx cterm=reverse guifg=#26292c guibg=#fa8419
-    Search                                 { fg=darker_gray, bg=yellow, }, -- Search         xxx ctermfg=0 ctermbg=11 guifg=#26292c guibg=#dfd561
+    IncSearch                              { fg=gray_2, bg=primary_orange, }, -- IncSearch      xxx cterm=reverse guifg=#26292c guibg=#fa8419
+    Search                                 { fg=gray_2, bg=yellow, }, -- Search         xxx ctermfg=0 ctermbg=11 guifg=#26292c guibg=#dfd561
     Substitute                             { Search }, -- Substitute     xxx links to Search
     TelescopePreviewMatch                  { Search }, -- TelescopePreviewMatch xxx links to Search
     TroublePreview                         { Search }, -- TroublePreview xxx links to Search
     MoreMsg                                { fg=white, gui="bold", }, -- MoreMsg        xxx ctermfg=121 gui=bold guifg=#f6f6ec
     ModeMsg                                { fg=white, gui="bold", }, -- ModeMsg        xxx cterm=bold gui=bold guifg=#f6f6ec
-    LineNr                                 { fg=light_gray, bg=darkest_gray, }, -- LineNr         xxx ctermfg=11 guifg=#4d5154 guibg=#26292c
+    LineNr                                 { fg=gray_6, bg=gray_1, }, -- LineNr         xxx ctermfg=11 guifg=#4d5154 guibg=#26292c
     LineNrAbove                            { LineNr }, -- LineNrAbove    xxx links to LineNr
     LineNrBelow                            { LineNr }, -- LineNrBelow    xxx links to LineNr
     TelescopeResultsLineNr                 { LineNr }, -- TelescopeResultsLineNr xxx links to LineNr
     TroubleIndent                          { LineNr }, -- TroubleIndent  xxx links to LineNr
     TroubleLocation                        { LineNr }, -- TroubleLocation xxx links to LineNr
     NvimTreeLineNr                         { LineNr }, -- NvimTreeLineNr xxx links to LineNr
-    CursorLineNr                           { fg=primary_orange, bg=darker_gray, }, -- CursorLineNr   xxx cterm=underline ctermfg=11 guifg=#fa8419 guibg=#26292c
+    CursorLineNr                           { fg=primary_orange, bg=gray_2, }, -- CursorLineNr   xxx cterm=underline ctermfg=11 guifg=#fa8419 guibg=#26292c
     TroubleFoldIcon                        { CursorLineNr }, -- TroubleFoldIcon xxx links to CursorLineNr
     NvimTreeCursorLineNr                   { CursorLineNr }, -- NvimTreeCursorLineNr xxx links to CursorLineNr
     Question                               { fg=yellow, }, -- Question       xxx ctermfg=121 guifg=#dfd561
-    StatusLine                             { fg=lighter_gray, bg=dark_gray, }, -- StatusLine     xxx cterm=bold,reverse guifg=#b1b1b1 guibg=#2e323c
+    StatusLine                             { fg=gray_7, bg=gray_3, }, -- StatusLine     xxx cterm=bold,reverse guifg=#b1b1b1 guibg=#2e323c
     MsgSeparator                           { StatusLine }, -- MsgSeparator   xxx links to StatusLine
     DiffviewStatusLine                     { StatusLine }, -- DiffviewStatusLine xxx links to StatusLine
     NvimTreeStatusLine                     { StatusLine }, -- NvimTreeStatusLine xxx links to StatusLine
-    StatusLineNC                           { fg=pinkish_gray, bg=dark_gray, }, -- StatusLineNC   xxx cterm=reverse guifg=#72696a guibg=#2e323c
+    StatusLineNC                           { fg=pinkish_gray, bg=gray_3, }, -- StatusLineNC   xxx cterm=reverse guifg=#72696a guibg=#2e323c
     DiffviewStatusLineNC                   { StatusLineNC }, -- DiffviewStatusLineNC xxx links to StatusLineNC
     NvimTreeStatusLineNC                   { StatusLineNC }, -- NvimTreeStatusLineNC xxx links to StatusLineNC
     VertSplit                              { fg="#504945", }, -- VertSplit      xxx guifg=#504945
@@ -168,11 +168,11 @@ local theme = lush(function(injected_functions)
     typescriptWindowEvent                  { Title }, -- typescriptWindowEvent xxx links to Title
     typescriptUncategorizedEvent           { Title }, -- typescriptUncategorizedEvent xxx links to Title
     typescriptServiceWorkerEvent           { Title }, -- typescriptServiceWorkerEvent xxx links to Title
-    Visual                                 { bg=gray_b, }, -- Visual         xxx ctermbg=242 guibg=#333842
+    Visual                                 { bg=gray_4, }, -- Visual         xxx ctermbg=242 guibg=#333842
     TelescopePreviewLine                   { Visual }, -- TelescopePreviewLine xxx links to Visual
     WarningMsg                             { fg=yellow, gui="bold", }, -- WarningMsg     xxx ctermfg=224 gui=bold guifg=#dfd561
     WildMenu                               { fg=white, bg=primary_orange, }, -- WildMenu       xxx ctermfg=0 ctermbg=11 guifg=#f6f6ec guibg=#fa8419
-    Folded                                 { fg=pinkish_gray, bg=dark_gray, }, -- Folded         xxx ctermfg=14 ctermbg=242 guifg=#72696a guibg=#2e323c
+    Folded                                 { fg=pinkish_gray, bg=gray_3, }, -- Folded         xxx ctermfg=14 ctermbg=242 guifg=#72696a guibg=#2e323c
     FoldColumn                             { fg=white, bg=black, }, -- FoldColumn     xxx ctermfg=14 ctermbg=242 guifg=#f6f6ec guibg=#000000
     CursorLineFold                         { FoldColumn }, -- CursorLineFold xxx links to FoldColumn
     DiffAdd                                { bg=muted_green, }, -- DiffAdd        xxx ctermbg=4 guibg=#3d5213
@@ -195,24 +195,24 @@ local theme = lush(function(injected_functions)
     SpellCap                               { sp="blue", gui="undercurl", fg=purple, }, -- SpellCap       xxx ctermbg=12 gui=undercurl guifg=#9c64fe guisp=Blue
     SpellRare                              { sp="magenta", gui="undercurl", fg=light_blue, }, -- SpellRare      xxx ctermbg=13 gui=undercurl guifg=#78dce8 guisp=Magenta
     SpellLocal                             { sp="cyan", gui="undercurl", fg=primary_red, }, -- SpellLocal     xxx ctermbg=14 gui=undercurl guifg=#f3005f guisp=Cyan
-    Pmenu                                  { fg=white, bg=dark_gray, }, -- Pmenu          xxx ctermfg=0 ctermbg=13 guifg=#f6f6ec guibg=#2e323c
-    PmenuSel                               { fg=gray_b, bg=primary_orange, }, -- PmenuSel       xxx ctermfg=242 ctermbg=0 guifg=#333842 guibg=#fa8419
-    PmenuSbar                              { bg=dark_gray, }, -- PmenuSbar      xxx ctermbg=248 guibg=#2e323c
+    Pmenu                                  { fg=white, bg=gray_3, }, -- Pmenu          xxx ctermfg=0 ctermbg=13 guifg=#f6f6ec guibg=#2e323c
+    PmenuSel                               { fg=gray_4, bg=primary_orange, }, -- PmenuSel       xxx ctermfg=242 ctermbg=0 guifg=#333842 guibg=#fa8419
+    PmenuSbar                              { bg=gray_3, }, -- PmenuSbar      xxx ctermbg=248 guibg=#2e323c
     PmenuThumb                             { fg=purple, bg=green, }, -- PmenuThumb     xxx ctermbg=15 guifg=#9c64fe guibg=#97e023
     TabLine                                { }, -- TabLine        xxx cterm=underline ctermfg=15 ctermbg=242
     TabModified                            { TabLine }, -- TabModified    xxx links to TabLine
-    TabLineSel                             { bg=gray_b, }, -- TabLineSel     xxx cterm=bold guibg=#333842
+    TabLineSel                             { bg=gray_4, }, -- TabLineSel     xxx cterm=bold guibg=#333842
     TabModifiedSelected                    { TabLineSel }, -- TabModifiedSelected xxx links to TabLineSel
     TroubleCount                           { TabLineSel }, -- TroubleCount   xxx links to TabLineSel
     TabLineFill                            { }, -- TabLineFill    xxx cterm=reverse
-    CursorColumn                           { bg=dark_gray, }, -- CursorColumn   xxx ctermbg=242 guibg=#2e323c
+    CursorColumn                           { bg=gray_3, }, -- CursorColumn   xxx ctermbg=242 guibg=#2e323c
     NvimTreeCursorColumn                   { CursorColumn }, -- NvimTreeCursorColumn xxx links to CursorColumn
-    CursorLine                             { bg=dark_gray, }, -- CursorLine     xxx cterm=underline guibg=#2e323c
+    CursorLine                             { bg=gray_3, }, -- CursorLine     xxx cterm=underline guibg=#2e323c
     DiffviewCursorLine                     { CursorLine }, -- DiffviewCursorLine xxx links to CursorLine
     NvimTreeCursorLine                     { CursorLine }, -- NvimTreeCursorLine xxx links to CursorLine
-    ColorColumn                            { bg=dark_gray, }, -- ColorColumn    xxx ctermbg=1 guibg=#2e323c
+    ColorColumn                            { bg=gray_3, }, -- ColorColumn    xxx ctermbg=1 guibg=#2e323c
     QuickFixLine                           { fg=purple, gui="bold", }, -- QuickFixLine   xxx gui=bold guifg=#9c64fe
-    Whitespace                             { fg=medium_gray, }, -- Whitespace     xxx guifg=#4d5154
+    Whitespace                             { fg=gray_5, }, -- Whitespace     xxx guifg=#4d5154
     NormalFloat                            { bg="#211f22", }, -- NormalFloat    xxx guibg=#211f22
     NullLsInfoBorder                       { NormalFloat }, -- NullLsInfoBorder xxx links to NormalFloat
     WhichKeyFloat                          { NormalFloat }, -- WhichKeyFloat  xxx links to NormalFloat
@@ -745,7 +745,7 @@ local theme = lush(function(injected_functions)
     TelescopePreviewNormal                 { TelescopeNormal }, -- TelescopePreviewNormal xxx links to TelescopeNormal
     TelescopeResultsNormal                 { TelescopeNormal }, -- TelescopeResultsNormal xxx links to TelescopeNormal
     TelescopePromptNormal                  { TelescopeNormal }, -- TelescopePromptNormal xxx links to TelescopeNormal
-    TelescopeBorder                        { fg=lighter_gray, }, -- TelescopeBorder xxx guifg=#b1b1b1
+    TelescopeBorder                        { fg=gray_7, }, -- TelescopeBorder xxx guifg=#b1b1b1
     TelescopePreviewBorder                 { TelescopeBorder }, -- TelescopePreviewBorder xxx links to TelescopeBorder
     TelescopeResultsBorder                 { TelescopeBorder }, -- TelescopeResultsBorder xxx links to TelescopeBorder
     TelescopePromptBorder                  { TelescopeBorder }, -- TelescopePromptBorder xxx links to TelescopeBorder
@@ -785,9 +785,9 @@ local theme = lush(function(injected_functions)
     sym"@keyword.function"                 { fg=light_blue, gui="italic", }, -- @keyword.function xxx gui=italic guifg=#78dce8
     sym"@function.call"                    { fg=white, }, -- @function.call xxx guifg=#f6f6ec
     IndentBlanklineContextChar             { fg=primary_red, gui="nocombine", }, -- IndentBlanklineContextChar xxx cterm=nocombine gui=nocombine guifg=#f3005f
-    IndentBlanklineSpaceCharBlankline      { fg=medium_gray, gui="nocombine", }, -- IndentBlanklineSpaceCharBlankline xxx cterm=nocombine gui=nocombine guifg=#4d5154
-    IndentBlanklineSpaceChar               { fg=medium_gray, gui="nocombine", }, -- IndentBlanklineSpaceChar xxx cterm=nocombine gui=nocombine guifg=#4d5154
-    IndentBlanklineChar                    { fg=medium_gray, gui="nocombine", }, -- IndentBlanklineChar xxx cterm=nocombine gui=nocombine guifg=#4d5154
+    IndentBlanklineSpaceCharBlankline      { fg=gray_5, gui="nocombine", }, -- IndentBlanklineSpaceCharBlankline xxx cterm=nocombine gui=nocombine guifg=#4d5154
+    IndentBlanklineSpaceChar               { fg=gray_5, gui="nocombine", }, -- IndentBlanklineSpaceChar xxx cterm=nocombine gui=nocombine guifg=#4d5154
+    IndentBlanklineChar                    { fg=gray_5, gui="nocombine", }, -- IndentBlanklineChar xxx cterm=nocombine gui=nocombine guifg=#4d5154
     IndentBlanklineContextStart            { sp=primary_red, gui="underline", }, -- IndentBlanklineContextStart xxx cterm=underline gui=underline guisp=#f3005f
     CmpItemAbbr                            { fg=white, }, -- CmpItemAbbr    xxx guifg=#f6f6ec
     CmpItemAbbrDefault                     { fg=white, }, -- CmpItemAbbrDefault xxx guifg=#f6f6ec
@@ -1030,21 +1030,21 @@ local theme = lush(function(injected_functions)
     DevIconGitAttributes                   { fg="#41535b", }, -- DevIconGitAttributes xxx ctermfg=59 guifg=#41535b
     DevIconGitModules                      { fg="#41535b", }, -- DevIconGitModules xxx ctermfg=59 guifg=#41535b
     DevIconHpp                             { fg="#a074c4", }, -- DevIconHpp     xxx ctermfg=140 guifg=#a074c4
-    ReachHandleDelete                      { fg=primary_red, bg=darker_gray, }, -- ReachHandleDelete xxx guifg=#f3005f guibg=#26292c
-    ReachHandleBuffer                      { fg=yellow, bg=darker_gray, }, -- ReachHandleBuffer xxx guifg=#dfd561 guibg=#26292c
-    ReachModifiedIndicator                 { fg=yellow, bg=darker_gray, }, -- ReachModifiedIndicator xxx guifg=#dfd561 guibg=#26292c
-    ReachDirectory                         { fg=light_blue, bg=darker_gray, }, -- ReachDirectory xxx guifg=#78dce8 guibg=#26292c
-    ReachBorder                            { fg=pinkish_gray, bg=darker_gray, }, -- ReachBorder    xxx guifg=#72696a guibg=#26292c
-    ReachCurrent                           { fg=yellow, bg=darker_gray, }, -- ReachCurrent   xxx guifg=#dfd561 guibg=#26292c
-    ReachPriority                          { fg=white, bg=darker_gray, }, -- ReachPriority  xxx guifg=#f6f6ec guibg=#26292c
-    ReachMatchExact                        { fg=yellow, bg=darker_gray, }, -- ReachMatchExact xxx guifg=#dfd561 guibg=#26292c
-    ReachGrayOut                           { fg=pinkish_gray, bg=darker_gray, }, -- ReachGrayOut   xxx guifg=#72696a guibg=#26292c
-    ReachMarkLocation                      { fg=pinkish_gray, bg=darker_gray, }, -- ReachMarkLocation xxx guifg=#72696a guibg=#26292c
-    ReachMark                              { fg=white, bg=darker_gray, }, -- ReachMark      xxx guifg=#f6f6ec guibg=#26292c
-    ReachHandleMarkGlobal                  { fg=purple, bg=darker_gray, }, -- ReachHandleMarkGlobal xxx guifg=#9c64fe guibg=#26292c
-    ReachHandleMarkLocal                   { fg=light_blue, bg=darker_gray, }, -- ReachHandleMarkLocal xxx guifg=#78dce8 guibg=#26292c
-    ReachTail                              { fg=white, bg=darker_gray, }, -- ReachTail      xxx guifg=#f6f6ec guibg=#26292c
-    ReachHandleSplit                       { fg=light_blue, bg=darker_gray, }, -- ReachHandleSplit xxx guifg=#78dce8 guibg=#26292c
+    ReachHandleDelete                      { fg=primary_red, bg=gray_2, }, -- ReachHandleDelete xxx guifg=#f3005f guibg=#26292c
+    ReachHandleBuffer                      { fg=yellow, bg=gray_2, }, -- ReachHandleBuffer xxx guifg=#dfd561 guibg=#26292c
+    ReachModifiedIndicator                 { fg=yellow, bg=gray_2, }, -- ReachModifiedIndicator xxx guifg=#dfd561 guibg=#26292c
+    ReachDirectory                         { fg=light_blue, bg=gray_2, }, -- ReachDirectory xxx guifg=#78dce8 guibg=#26292c
+    ReachBorder                            { fg=pinkish_gray, bg=gray_2, }, -- ReachBorder    xxx guifg=#72696a guibg=#26292c
+    ReachCurrent                           { fg=yellow, bg=gray_2, }, -- ReachCurrent   xxx guifg=#dfd561 guibg=#26292c
+    ReachPriority                          { fg=white, bg=gray_2, }, -- ReachPriority  xxx guifg=#f6f6ec guibg=#26292c
+    ReachMatchExact                        { fg=yellow, bg=gray_2, }, -- ReachMatchExact xxx guifg=#dfd561 guibg=#26292c
+    ReachGrayOut                           { fg=pinkish_gray, bg=gray_2, }, -- ReachGrayOut   xxx guifg=#72696a guibg=#26292c
+    ReachMarkLocation                      { fg=pinkish_gray, bg=gray_2, }, -- ReachMarkLocation xxx guifg=#72696a guibg=#26292c
+    ReachMark                              { fg=white, bg=gray_2, }, -- ReachMark      xxx guifg=#f6f6ec guibg=#26292c
+    ReachHandleMarkGlobal                  { fg=purple, bg=gray_2, }, -- ReachHandleMarkGlobal xxx guifg=#9c64fe guibg=#26292c
+    ReachHandleMarkLocal                   { fg=light_blue, bg=gray_2, }, -- ReachHandleMarkLocal xxx guifg=#78dce8 guibg=#26292c
+    ReachTail                              { fg=white, bg=gray_2, }, -- ReachTail      xxx guifg=#f6f6ec guibg=#26292c
+    ReachHandleSplit                       { fg=light_blue, bg=gray_2, }, -- ReachHandleSplit xxx guifg=#78dce8 guibg=#26292c
     GitSignsStagedAdd                      { fg="#4b7011", }, -- GitSignsStagedAdd xxx cterm= gui= guifg=#4b7011
     GitSignsStagedChange                   { fg="#4b7011", }, -- GitSignsStagedChange xxx cterm= gui= guifg=#4b7011
     GitSignsStagedDelete                   { fg="#79002f", }, -- GitSignsStagedDelete xxx cterm= gui= guifg=#79002f
@@ -1058,13 +1058,13 @@ local theme = lush(function(injected_functions)
     GitSignsStagedAddLn                    { bg=muted_green, }, -- GitSignsStagedAddLn xxx cterm= gui= guibg=#3d5213
     GitSignsStagedChangeLn                 { bg=muted_blue, }, -- GitSignsStagedChangeLn xxx cterm= gui= guibg=#27406b
     GitSignsStagedChangedeleteLn           { bg=muted_blue, }, -- GitSignsStagedChangedeleteLn xxx cterm= gui= guibg=#27406b
-    Terminal                               { fg=white, bg=darker_gray, }, -- Terminal       xxx guifg=#f6f6ec guibg=#26292c
+    Terminal                               { fg=white, bg=gray_2, }, -- Terminal       xxx guifg=#f6f6ec guibg=#26292c
     iCursor                                { gui="reverse", }, -- iCursor        xxx gui=reverse
-    PmenuSelBold                           { fg=gray_b, bg=primary_orange, }, -- PmenuSelBold   xxx guifg=#333842 guibg=#fa8419
-    debugBreakpoint                        { fg=darker_gray, bg=primary_red, }, -- debugBreakpoint xxx guifg=#26292c guibg=#f3005f
+    PmenuSelBold                           { fg=gray_4, bg=primary_orange, }, -- PmenuSelBold   xxx guifg=#333842 guibg=#fa8419
+    debugBreakpoint                        { fg=gray_2, bg=primary_red, }, -- debugBreakpoint xxx guifg=#26292c guibg=#f3005f
     CursorIM                               { gui="reverse", }, -- CursorIM       xxx gui=reverse
     vCursor                                { gui="reverse", }, -- vCursor        xxx gui=reverse
-    VisualNOS                              { bg=dark_gray, }, -- VisualNOS      xxx guibg=#2e323c
+    VisualNOS                              { bg=gray_3, }, -- VisualNOS      xxx guibg=#2e323c
     CursorWord1                            { fg=black, bg=white, }, -- CursorWord1    xxx guifg=#000000 guibg=#f6f6ec
     sym"@definition"                       { fg=green, }, -- @definition    xxx guifg=#97e023
     sym"@definition.type"                  { fg=green, }, -- @definition.type xxx guifg=#97e023
