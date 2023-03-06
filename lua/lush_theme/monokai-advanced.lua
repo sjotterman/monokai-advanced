@@ -610,12 +610,12 @@ local theme = lush(function(injected_functions)
     DiagnosticVirtualTextHint              { fg=light_blue, }, -- DiagnosticVirtualTextHint xxx guifg=#78dce8
     DiagnosticSignError                    { fg=primary_red, bg=LineNr.bg }, -- DiagnosticSignError xxx guifg=#f3005f
     TroubleSignError                       { DiagnosticSignError }, -- TroubleSignError xxx links to DiagnosticSignError
-    DiagnosticSignWarn                     { fg=yellow, }, -- DiagnosticSignWarn xxx guifg=#dfd561
+    DiagnosticSignWarn                     { fg=yellow, bg=LineNr.bg}, -- DiagnosticSignWarn xxx guifg=#dfd561
     DiffviewFilePanelConflicts             { DiagnosticSignWarn }, -- DiffviewFilePanelConflicts xxx links to DiagnosticSignWarn
     TroubleSignWarning                     { DiagnosticSignWarn }, -- TroubleSignWarning xxx links to DiagnosticSignWarn
     DiagnosticSignInfo                     { fg=white, }, -- DiagnosticSignInfo xxx guifg=#f6f6ec
     TroubleSignInformation                 { DiagnosticSignInfo }, -- TroubleSignInformation xxx links to DiagnosticSignInfo
-    DiagnosticSignHint                     { fg=light_blue, }, -- DiagnosticSignHint xxx guifg=#78dce8
+    DiagnosticSignHint                     { fg=light_blue,  bg=LineNr.bg}, -- DiagnosticSignHint xxx guifg=#78dce8
     TroubleSignHint                        { DiagnosticSignHint }, -- TroubleSignHint xxx links to DiagnosticSignHint
     sym"@text"                             { fg=green, }, -- @text          xxx guifg=#97e023
     sym"@text.literal"                     { fg=yellow, }, -- @text.literal  xxx guifg=#dfd561
