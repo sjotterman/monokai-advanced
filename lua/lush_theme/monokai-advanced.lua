@@ -618,7 +618,7 @@ local theme = lush(function(injected_functions)
     DiagnosticSignWarn                     { fg=yellow, bg=LineNr.bg}, -- DiagnosticSignWarn xxx guifg=#dfd561
     DiffviewFilePanelConflicts             { DiagnosticSignWarn }, -- DiffviewFilePanelConflicts xxx links to DiagnosticSignWarn
     TroubleSignWarning                     { DiagnosticSignWarn }, -- TroubleSignWarning xxx links to DiagnosticSignWarn
-    DiagnosticSignInfo                     { fg=white, }, -- DiagnosticSignInfo xxx guifg=#f6f6ec
+    DiagnosticSignInfo                     { fg=white,bg=LineNr.bg }, -- DiagnosticSignInfo xxx guifg=#f6f6ec
     TroubleSignInformation                 { DiagnosticSignInfo }, -- TroubleSignInformation xxx links to DiagnosticSignInfo
     DiagnosticSignHint                     { fg=light_blue,  bg=LineNr.bg}, -- DiagnosticSignHint xxx guifg=#78dce8
     TroubleSignHint                        { DiagnosticSignHint }, -- TroubleSignHint xxx links to DiagnosticSignHint
